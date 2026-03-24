@@ -41,7 +41,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background: transparent;
+    background: rgba(10, 22, 40, 0.90);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
@@ -67,7 +67,7 @@ nav .container {
 nav .cta {
     background: var(--forge-blue);
     color: white;
-    padding: 12px 32px;
+    padding: 12px 36px;
     border-radius: 6px;
     text-decoration: none;
     font-family: var(--font-exo);
@@ -107,7 +107,7 @@ nav .cta:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 22, 40, 0.7);
+    background: rgba(10, 22, 40, 0.95);
     z-index: 1;
 }
 
@@ -116,7 +116,7 @@ nav .cta:hover {
     z-index: 2;
     color: white;
     max-width: 900px;
-    padding: 0px 24px;
+    padding: 0px 20px;
     width: 100%;
     margin-top: 150px;
     z-index: 2;
@@ -124,23 +124,25 @@ nav .cta:hover {
 }
 
 .hero-content h1 {
-    font-size: 80px;
+    font-family: var(--font-exo);
+    font-size: 82px;
     line-height: normal;
     color: white;
+    font-weight: 600;
     margin-bottom: 26px;
 }
 
 .hero-content p {
-    font-size: 20px;
-    font-family: var(--font-exo);
-    font-weight: 600;
+    font-size: 26px;
+    font-family: var(--font-inter);
+    font-weight: 500;
 }
 
 
 .btn-primary {
     background: var(--forge-blue);
     color: white;
-    padding: 12px 32px;
+    padding: 12px 36px;
     border-radius: 8px;
     text-decoration: none;
     font-family: var(--font-exo);
@@ -380,52 +382,87 @@ section {
 }
 
 /* FAQ Section */
+/* FAQ Container Styling */
 .faq {
-    background: var(--background-gray);
-    padding: 120px 48px;
-    margin: 0;
-    max-width: 100%;
+    padding: 80px 0;
+    background-color: #ffffff;
 }
 
-.faq .container {
-    max-width: 1000px;
+.faq-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #0a1628;
+}
+
+.faq-list {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.faq h2 {
-    font-family: var(--font-exo);
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--deep-navy);
-    margin-bottom: 64px;
-    text-align: center;
-}
-
 .faq-item {
-    background: white;
-    padding: 32px;
-    border-radius: 12px;
-    margin-bottom: 24px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.faq-item h3 {
-    font-family: var(--font-exo);
-    font-size: 22px;
+/* The Clickable Question */
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--deep-navy);
-    margin-bottom: 16px;
+    color: #0a1628;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.faq-item p {
-    font-size: 16px;
-    color: var(--charcoal);
-    line-height: 1.7;
+.faq-question:hover {
+    color: #2563eb; /* A nice blue hover effect */
+}
+
+/* The Animated Answer Wrapper */
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr; /* Start hidden */
+    transition: grid-template-rows 0.3s ease-out;
+    overflow: hidden;
+}
+
+/* Active State - Triggered by JS */
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr; /* Slide open */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Turns + into an X */
+}
+
+.faq-content {
+    min-height: 0;
+}
+
+.faq-content p {
+    padding-bottom: 24px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    margin-left: 20px;
 }
 
 /* Contact Section */
 .contact {
-    padding: 120px 48px;
+    padding: 120px 18px;
     text-align: center;
+    width: 100%;
 }
 
 .contact h2 {
@@ -524,7 +561,7 @@ footer p {
     }
 
     nav .cta {
-        padding: 8px 20px;
+        padding: 8px 22px;
         font-size: 14px;
         white-space: nowrap;
     }
@@ -540,16 +577,29 @@ footer p {
     }
 
     .hero-content h1 {
-        font-size: clamp(1.8rem, 8vw, 3.5rem);
+        font-size: clamp(2.12rem, 8vw, 3.5rem);
         line-height: 1.2;
         margin-bottom: 20px;
     }
 
     .hero-content p {
-        font-size: clamp(1rem, 4vw, 1.25rem);
+        font-size: clamp(0.9rem, 4vw, 1.25rem);
         max-width: 90%;
         margin: 0 auto 30px auto;
     }
+    .btn-primary {
+    background: var(--forge-blue);
+    color: white;
+    padding: 8px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: var(--font-exo);
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 24px;
+}
 
     section {
         padding: 80px 24px;
@@ -573,14 +623,12 @@ footer p {
 
     .philosophy-section {
         padding: 60px 20px;
-        /* Reduced from 120px to save mobile space */
         background-color: #fff;
     }
 
     .philosophy-container {
         display: flex;
         flex-direction: column;
-        /* Stack vertically for mobile */
         gap: 40px;
         max-width: 1200px;
         margin: 0 auto;
@@ -589,7 +637,6 @@ footer p {
     .philosophy-content h2 {
         font-family: var(--font-exo);
         font-size: clamp(2rem, 8vw, 3rem);
-        /* Responsive font size */
         font-weight: 700;
         color: var(--deep-navy);
         margin-bottom: 24px;
@@ -604,9 +651,8 @@ footer p {
     }
 
     .philosophy-image img {
-        width: 100%;
-        height: 350px;
-        /* Reduced fixed height for mobile */
+        width: 90vw;
+        height: 80vh;
         object-fit: cover;
         border-radius: 12px;
     }
@@ -616,7 +662,7 @@ footer p {
     }
 
     .contact h2 {
-        font-size: 36px;
+        font-size: 24px;
     }
 
     .contact-info {

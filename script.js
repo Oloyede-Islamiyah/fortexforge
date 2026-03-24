@@ -11,3 +11,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const parent = question.parentElement;
+            const isOpen = parent.classList.contains('active');
+
+            // 1. Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // 2. If the clicked one wasn't already open, open it
+            if (!isOpen) {
+                parent.classList.add('active');
+            }
+        });
+    });
+});
