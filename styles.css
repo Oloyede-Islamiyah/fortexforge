@@ -559,15 +559,43 @@ footer p {
         min-height: 100vh;
         padding-bottom: 50px;
     }
+@media (max-width: 768px) {
     .hero-content {
+        padding: 0 20px;
+        margin-top: 100px/* Reduced so the button doesn't fall off the screen */
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+        font-weight: 900;
+        line-height: 42px; 
+        margin-bottom: 16px;
+        letter-spacing: -0.5px; 
+    }
+
+    .hero-content p.subtitle {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        font-family: var(--font-inter);
+        width: 100%;
+    }
+
+    .btn-primary {
+        padding: 14px 30;
+        font-size: 16px;
+    }
+}
+
+    /* .hero-content {
     position: relative;
     z-index: 2;
     color: white;
     max-width: 900px;
     padding: 0px 20px;
     /* width: 100%; */
-    margin-top: 90px;
-    z-index: 2;
+    /* margin-top: 90px; */
+    /* z-index: 2;
     position: relative;
 }
     
@@ -575,18 +603,17 @@ footer p {
         font-family: var(--font-exo);
         font-weight: 900;
         font-size: 38px; 
-        line-height: 1.6;
-        width: 100%;
+        line-height: 1.1; */
+        /* width: 100%;
         padding-bottom: 20px;
         margin: 0 auto 1px auto;
         display: block;
     }
     .hero-content p {
         font-weight: 400; 
-        font-size: 20;
+        font-size: 14px;
         font-family: var(--font-inter);
-        max-width: 800px;
-        line-height: 1.6;
+        max-width: 94%;
         margin: 0 auto 1px auto;
     }
 
@@ -602,7 +629,7 @@ footer p {
     transition: all 0.3s ease;
     display: inline-block;
     margin-top: 24px;
-}
+} */ */
 
     section {
         padding: 80px 24px;
