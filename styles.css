@@ -574,8 +574,8 @@ footer p {
     .hero-content h1 {
         font-family: var(--font-exo);
         font-weight: 900;
-        font-size: 36px; 
-        line-height: 1.1;
+        font-size: 38px; 
+        line-height: 1.6;
         width: 100%;
         padding-bottom: 20px;
         margin: 0 auto 1px auto;
@@ -583,9 +583,10 @@ footer p {
     }
     .hero-content p {
         font-weight: 400; 
-        font-size: 12px;
+        font-size: 20;
         font-family: var(--font-inter);
-        max-width: 94%;
+        max-width: 800px;
+        line-height: 1.6;
         margin: 0 auto 1px auto;
     }
 
