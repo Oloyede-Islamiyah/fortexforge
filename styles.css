@@ -97,9 +97,6 @@ nav .cta:hover {
     padding: 0;
 }
 
-
-
-
 .hero-overlay::before {
     content: '';
     position: absolute;
@@ -107,7 +104,7 @@ nav .cta:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 22, 40, 0.95);
+    background: rgba(10, 22, 40, 0.9);
     z-index: 1;
 }
 
@@ -118,18 +115,20 @@ nav .cta:hover {
     max-width: 900px;
     padding: 0px 20px;
     width: 100%;
-    margin-top: 150px;
-    z-index: 2;
+    margin-top: 100px;
     position: relative;
 }
 
 .hero-content h1 {
     font-family: var(--font-exo);
     font-size: 82px;
-    line-height: normal;
+    line-height: 1.1; 
     color: white;
-    font-weight: 600;
+    font-weight: 800; 
     margin-bottom: 26px;
+}
+.mobile-break { 
+    display: none; 
 }
 
 .hero-content p {
@@ -138,7 +137,6 @@ nav .cta:hover {
     font-weight: 500;
 }
 
-
 .btn-primary {
     background: var(--forge-blue);
     color: white;
@@ -146,7 +144,7 @@ nav .cta:hover {
     border-radius: 8px;
     text-decoration: none;
     font-family: var(--font-exo);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     transition: all 0.3s ease;
     display: inline-block;
@@ -165,8 +163,8 @@ section {
     margin: 0 auto;
 }
 
-.section-header {
-    margin-bottom: 64px;
+.section-header h2 {
+    margin-bottom: 0px;
 }
 
 .section-header h2 {
@@ -174,7 +172,7 @@ section {
     font-size: 46px;
     font-weight: 700;
     color: var(--deep-navy);
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     line-height: 1.2;
     letter-spacing: -1px;
 }
@@ -322,32 +320,24 @@ section {
 }
 
 /*  Philosophy Section  */
-/* --- PHILOSOPHY SECTION: DESKTOP FIRST --- */
-
 .philosophy-section {
     width: 100%;
     padding: 120px 48px;
-    /* Spacing for desktop */
     background-color: #ffffff;
 }
 
 .philosophy-container {
     display: flex;
     flex-direction: row;
-    /* Forces side-by-side */
     align-items: center;
-    /* Vertically centers the text with the image */
     justify-content: space-between;
     gap: 80px;
-    /* Space between the text and the image */
     max-width: 1200px;
     margin: 0 auto;
-    /* Centers the whole section on the page */
 }
 
 .philosophy-content {
     flex: 1;
-    /* Takes up 50% width */
 }
 
 .philosophy-content h2 {
@@ -368,21 +358,17 @@ section {
 
 .philosophy-image {
     flex: 1;
-    /* Takes up 50% width */
 }
 
 .philosophy-image img {
     width: 100%;
     height: 550px;
-    /* Height for the professional agency look */
     object-fit: cover;
-    /* Keeps image from stretching */
     border-radius: 12px;
     display: block;
 }
 
 /* FAQ Section */
-/* FAQ Container Styling */
 .faq {
     padding: 80px 0;
     background-color: #ffffff;
@@ -422,24 +408,24 @@ section {
 }
 
 .faq-question:hover {
-    color: #2563eb; /* A nice blue hover effect */
+    color: #2563eb; 
 }
 
 /* The Animated Answer Wrapper */
 .faq-answer {
     display: grid;
-    grid-template-rows: 0fr; /* Start hidden */
+    grid-template-rows: 0fr; 
     transition: grid-template-rows 0.3s ease-out;
     overflow: hidden;
 }
 
 /* Active State - Triggered by JS */
 .faq-item.active .faq-answer {
-    grid-template-rows: 1fr; /* Slide open */
+    grid-template-rows: 1fr; 
 }
 
 .faq-item.active .faq-icon {
-    transform: rotate(45deg); /* Turns + into an X */
+    transform: rotate(45deg); 
 }
 
 .faq-content {
@@ -517,7 +503,7 @@ section {
 }
 
 .contact-item .value a:hover {
-    color: #0d5dc7;
+    color: var(--forge-blue);
 }
 
 /* Footer */
@@ -575,18 +561,39 @@ footer p {
         min-height: 100vh;
         padding-bottom: 50px;
     }
-
+    .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    padding: 0px 20px;
+    /* width: 100%; */
+    margin-top: 100px;
+    z-index: 2;
+    position: relative;
+}
+    
     .hero-content h1 {
-        font-size: clamp(2.12rem, 8vw, 3.5rem);
-        line-height: 1.2;
-        margin-bottom: 20px;
+        font-family: 'Exo', sans-serif ;
+        font-weight: 900;
+        font-size: clamp(1.73rem, 7vw, 2.4rem); 
+        line-height: 1.4;
+        width: 98%;
+        padding-bottom: 20px;
+        margin: 0 auto 1px auto;
+        display: block;
     }
+    .mobile-break {
+         display: block;
+         }
 
     .hero-content p {
-        font-size: clamp(0.9rem, 4vw, 1.25rem);
-        max-width: 90%;
-        margin: 0 auto 30px auto;
+        font-size: clamp(0.83rem, 4vw, 2.25rem);
+        font-weight: 600; 
+        max-width: 94%;
+        margin: 0 auto 1px auto;
     }
+
     .btn-primary {
     background: var(--forge-blue);
     color: white;
@@ -607,6 +614,7 @@ footer p {
 
     .section-header h2 {
         font-size: 36px;
+        margin: 0px;
     }
 
     .hidden-cost,
