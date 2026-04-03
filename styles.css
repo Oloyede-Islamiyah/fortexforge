@@ -154,7 +154,6 @@ nav .cta:hover {
     transform: translateY(-2px);
 }
 
-
 section {
     padding: 120px 48px;
     max-width: 1200px;
@@ -526,11 +525,11 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav .container {
+        nav .container {
         padding: 20px 24px;
     }
 
-    nav .container {
+        nav .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -544,13 +543,13 @@ footer p {
         width: 120px;
     }
 
-    nav .cta {
+        nav .cta {
         padding: 12px 28px;
         font-size: 14px;
         white-space: nowrap;
     }
 
-    .hero-overlay {
+        .hero-overlay {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -559,10 +558,10 @@ footer p {
         min-height: 100vh;
         padding-bottom: 50px;
     }
-@media (max-width: 768px) {
+    
     .hero-content {
         padding: 0 20px;
-        margin-top: 100px/* Reduced so the button doesn't fall off the screen */
+        margin-top: 100px;
     }
 
     .hero-content h1 {
@@ -585,51 +584,7 @@ footer p {
         padding: 14px 30;
         font-size: 16px;
     }
-}
 
-    /* .hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    max-width: 900px;
-    padding: 0px 20px;
-    /* width: 100%; */
-    /* margin-top: 90px; */
-    /* z-index: 2;
-    position: relative;
-}
-    
-    .hero-content h1 {
-        font-family: var(--font-exo);
-        font-weight: 900;
-        font-size: 38px; 
-        line-height: 1.1; */
-        /* width: 100%;
-        padding-bottom: 20px;
-        margin: 0 auto 1px auto;
-        display: block;
-    }
-    .hero-content p {
-        font-weight: 400; 
-        font-size: 14px;
-        font-family: var(--font-inter);
-        max-width: 94%;
-        margin: 0 auto 1px auto;
-    }
-
-    .btn-primary {
-    background: var(--forge-blue);
-    color: white;
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-family: var(--font-exo);
-    font-weight: 600;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 24px;
-} */ */
 
     section {
         padding: 80px 24px;

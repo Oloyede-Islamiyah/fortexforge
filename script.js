@@ -20,12 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const parent = question.parentElement;
             const isOpen = parent.classList.contains('active');
 
-            // 1. Close all other FAQ items
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
 
-            // 2. If the clicked one wasn't already open, open it
             if (!isOpen) {
                 parent.classList.add('active');
             }
